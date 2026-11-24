@@ -1,0 +1,15 @@
+{
+  "name": "Claude Voice",
+  "author": "o-raskin",
+  "flags": [],
+  "api_version": 1,
+  "publish": {
+    "tags": [
+      "ai",
+      "voice",
+      "assistant"
+    ],
+    "description": "Voice-dictated Claude Code assistant in the Quick Access Menu, with on-screen approval for every action.",
+    "image": "https://raw.githubusercontent.com/o-raskin/decky-claude-voice/main/assets/thumbnail.png"
+  }
+}
