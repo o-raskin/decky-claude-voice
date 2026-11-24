@@ -4,7 +4,10 @@
   "description": "Claude Code with voice dictation in the Quick Access Menu",
   "type": "module",
   "scripts": {
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "test": "pnpm test:ts && pnpm test:py",
+    "test:ts": "vitest run --coverage",
+    "test:py": "uv run --python 3.13 --with pytest --with pytest-asyncio --with pytest-cov pytest"
   },
   "license": "MIT",
   "devDependencies": {
@@ -13,7 +16,15 @@
     "@types/react": "18.3.3",
     "@types/webpack": "^5.28.5",
     "rollup": "^4.22.5",
-    "typescript": "^5.6.2"
+    "typescript": "^5.6.2",
+    "vitest": "^3.2.4",
+    "@vitest/coverage-v8": "^3.2.4",
+    "jsdom": "^26.1.0",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/dom": "^10.4.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "@types/react-dom": "18.3.0"
   },
   "dependencies": {
     "@decky/api": "^1.1.2",

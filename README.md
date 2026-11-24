@@ -52,3 +52,16 @@ recording. Full in-Decky flow still needs testing on device.
 ## License
 
 MIT
+
+## Tests
+
+```bash
+pnpm install
+pnpm test        # frontend (vitest + jsdom) and backend (pytest via uv, Python >= 3.10)
+pnpm test:ts     # vitest with coverage thresholds
+pnpm test:py     # pytest, fails below 100% line + branch coverage of main.py and bin/approve-hook.py
+```
+
+The backend tests run the real plugin against fake `claude`, `pw-record` and `whisper-cli` executables
+(see `tests/py/conftest.py`) and drive the real approval hook end to end. The frontend tests replace
+`@decky/ui` and `@decky/api` with small stand-ins (`tests/ts/mocks`) so gamepad handlers can be fired directly.
